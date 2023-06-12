@@ -1,0 +1,26 @@
+name: test_app
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.17.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  test_package_1:
+    path: ./test_package_1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  deferred-components:
+    - name: boxComponent
+      libraries:
+        - package:test_package_1/test_package_1.dart
+  uses-material-design: true
